@@ -2,8 +2,8 @@
 // export const API_URL = "http://localhost:8090/api/v1";
 
 // Deployment
-// export const API_URL = "https://cabinetdentaireivoire.com/api/v1";
-export const API_URL = "http://95.217.183.200:2000/api/v1";
+export const API_URL = "https://cabinetdentaireivoire.com/api/v1";
+// export const API_URL = "http://95.217.183.200:2000/api/v1";
 // export const API_URL = "http://95.217.183.200:2025/api/v1";
 
 const BASE_URL = API_URL.replace("/api/v1", "");
