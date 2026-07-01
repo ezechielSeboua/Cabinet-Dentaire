@@ -1,0 +1,32 @@
+/* Make the month container and the month itself take up the full width */
+.react-datepicker__month-container,
+.react-datepicker__month {
+  width: 100%;
+}
+
+/* 
+  Use Flexbox to distribute the days evenly across the week.
+  This is the key to making the days fill the horizontal space.
+*/
+.react-datepicker__day-names,
+.react-datepicker__week {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 
+  Make each day name and day number grow to fill the available space.
+  We also adjust the width and line-height for better aspect ratio.
+*/
+.react-datepicker__day-name,
+.react-datepicker__day {
+  flex-grow: 1;
+  width: auto; /* Override fixed width */
+  line-height: 2rem; /* Adjust for vertical centering and height */
+  margin: 0.1rem; /* A little space between days */
+}
+
+/* Ensure the selected/today's custom style also fills the space */
+.react-datepicker__day.bg-blue-100 {
+  line-height: 2rem;
+}

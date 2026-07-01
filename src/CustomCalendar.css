@@ -1,0 +1,29 @@
+/* CustomCalendar.css */
+
+.react-calendar {
+  border: none;
+  font-family: 'Arial', sans-serif;
+}
+
+.react-calendar__tile {
+  border-radius: 8px;
+}
+
+.react-calendar__tile--active {
+  background: #007bff;
+  color: rgb(7, 131, 96);
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.react-calendar__tile--active:hover {
+  background: #0056b3;
+}
+
+.react-calendar__tile--now {
+  background: #e6e6e6;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: #d10000;
+}

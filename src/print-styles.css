@@ -1,0 +1,68 @@
+/*
+ * These styles are ONLY applied when the page is being printed.
+*/
+@media print {
+  /* Hide everything on the page by default */
+  body * {
+    visibility: hidden;
+  }
+
+  /* Make only the printable area and its children visible */
+  #printable-area,
+  #printable-area * {
+    visibility: visible;
+  }
+
+  /* Position the printable area at the top-left of the page */
+  #printable-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%; /* The width will be constrained by the @page rule */
+  }
+
+  /* --- Key for POS Printers: Define the page size --- */
+  @page {
+    /*
+     * Typical POS receipt widths are 58mm or 80mm.
+     * Adjust the width below to match your printer.
+    */
+    size: 80mm auto; /* Set width to 80mm, height will adjust to content */
+    margin: 3mm; /* Add a small margin around the content */
+  }
+
+  /* General styling for the receipt content */
+  .receipt-logo {
+    max-width: 60px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .receipt-cachet {
+    max-width: 0px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .receipt-qr {
+    width: 30px;
+    height: 30px;
+    margin: 6px auto 0;
+    display: block;
+  }
+
+  .dashed-line {
+    border-top: 1px dashed #000;
+    margin: 10px 0;
+  }
+
+  .kv-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Remove elements that shouldn't be on the printed receipt */
+  .no-print {
+    display: none;
+  }
+}

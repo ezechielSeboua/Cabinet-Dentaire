@@ -1,0 +1,23 @@
+/* In your modal.css or global CSS file */
+.SlotsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 1rem;
+}
+
+.SlotButton {
+  background-color: #f0f5ff;
+  color: #1d4ed8;
+  border: 1px solid #dbeafe;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.SlotButton:hover {
+  background-color: #1d4ed8;
+  color: white;
+  transform: translateY(-2px);
+}
